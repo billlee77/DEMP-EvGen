@@ -1,10 +1,23 @@
 {
+	// This is an exmaple Json configuration file that will accept 
+	// parameters for both EIC and Solid simulation.
     //Config
     // All values should use units of MeV for energies and momenta,
     // and degrees for angles.
     // n_events indicates number of attempts
+	// "experiment" : "eic" or "solid"
+    "experiment" : "eic",
     "output_file" : "RootFiles/Test.root",
-    "n_events" : 10000,
+    "n_events" : 100000,
+
+	//**************************************
+    /// This section if for EIC simulation only
+	"Targ_dir" : 1,          // Target Direction (1->Up, 2->Down)
+	"Kinematics_type" : 1,   // Kinematics type (1->FF, 2->TSSA)
+
+	//**************************************
+	/// This section is Solid only
+
     "beam_energy": 11000,
     "targ_pol_x": 0,
     "targ_pol_y": 0,

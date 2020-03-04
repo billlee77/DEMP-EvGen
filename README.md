@@ -1,4 +1,4 @@
-# DEMP-EvGen
+# DEMPgen
 Event generator for Deep Exclusive Meson Production
 
 
@@ -11,16 +11,16 @@ CMake is also required. CMake 2.8 is the minimum supported version, and CMake 3 
 
 After downloading the source create a build directory and cd to it. Take note of the location of the source directory (where CMakeLists.txt should be stored) and run the commands:
 
-```
-cmake <source directory>
+mdkir build.
+cd build
+cmake ..
 make
-```
 
-The event generator can now be run using:
+The event generator can now be run using the following command in the data/ directory.
 
-```
-./main <config file>
-```
+cd data/
+../build/main ../Config.json
+
 
 ## Configuration
 

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
-project(DEMP-EvGen)
-set (DEMP-EvGen_VERSION_MAJOR 0)
-set (DEMP-EvGen_VERSION_MINOR 1)
+project(DEMPgen)
+set (DEMPgen_VERSION_MAJOR 0)
+set (DEMPgen_VERSION_MINOR 1)
 
 add_definitions (-DROOT_MATH_LOG)
 
@@ -17,12 +17,12 @@ include_directories(include)
 include_directories(SYSTEM ${ROOT_INCLUDE_DIRS})
 #include_directories(include/json)
 
-file(GLOB SOURCES "src/*")
+file(GLOB SOURCES "src/*" "src/eic_evgen/eic.cc" "src/eic_evgen/eic_pim.cc" "src/eic_evgen/tssa_sig_Para.cc")
 # file(GLOB SOURCES "src/*.cpp")
 
 message("Root Include Dirs: " ${ROOT_INCLUDE_DIRS})
 message("Root Libraries: " ${ROOT_LIBRARIES})
 message("Mathmore: " ${ROOT_mathmore_FOUND})
 
-add_executable (main ${SOURCES})
-target_link_libraries(main ${ROOT_LIBRARIES})
+add_executable (DEMPgen ${SOURCES})
+target_link_libraries(DEMPgen ${ROOT_LIBRARIES})
